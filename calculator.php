@@ -49,19 +49,22 @@ if (!empty($_POST["shape"])) {
 }
 
 if ($check == "Circle") {
- 	echo "<br> The Diameter of the Circle is $diaCircle <br>";
-	echo "The Area of the Circle is $areaCircle <br>";
-	echo "The Circumference of the Circle is $circumferenceCircle <br>";
+	echo "<br> The radius of the circle is $userRadius. <br>";
+ 	echo "The Diameter of the Circle is $diaCircle, this is caluculated by 2 x radius. <br>";
+	echo "The Area of the Circle is $areaCircle, this is calculated by 3.14 x radius x radius.<br>";
+	echo "The Circumference of the Circle is $circumferenceCircle, this is calculated by 2 x 3.14 x radius.<br>";
 	echo "<div class='render' style='border-radius:50%; height:{$userRadius}px; width:{$userRadius}px;'></div>";
 
 }else if ($check == "Rectangle") {
-	echo "<br> The Area of the Rectangle is $areaRect <br>";
-	echo "The Perimeter of the Rectangle is $perimeterRect <br>";
+	echo "<br> The length of the rectangle is $rectangleLength and the height is $squareSide. <br>";
+	echo "The Area of the Rectangle is $areaRect, this is calculated by the height x length. <br>";
+	echo "The Perimeter of the Rectangle is $perimeterRect, this is calculated by 2 x (length + height).<br>";
 	echo "<div class='render' style='width:{$rectangleLength}px; height:{$squareSide}px;'></div>";
 
 }else if ($check == "Square") {
-	echo "<br> The Area of the Sqaure is $side <br>";
-	echo "The Perimeter of the Square is $perimeter <br>";
+	echo "<br> The sides of the sqaure are $squareSide.<br>";
+	echo "The Area of the Sqaure is $side, this is calculated by side x side.<br>";
+	echo "The Perimeter of the Square is $perimeter, this is calculated by 4 x side. <br>";
 	echo "<div class='render' style='width:{$squareSide}px; height:{$squareSide}px;'></div>";
 }
 
