@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Yoobee Calculater</title>
+
+	<style>
+
+	h1 {
+		color: #22313F;
+		text-align: center;
+		margin-top: 35px;
+		padding-top: 15px;
+	}
+
+	.container {
+		margin: 0 auto;
+		
+		background-color: white;
+	}
+
+	body {
+		background-color: #67809F;
+	}
+
+	.time {
+		margin: 0 auto;
+		width: 70%;
+		text-align: center;
+	}
+
+	p {
+		text-align: center;
+	}
+
+	input {
+		margin-right: 50px;
+	}
+
+	.dials {
+		margin-left: 90px;
+		margin-top: 30px;
+		text-align: center;
+	}
+
+	.box {
+		width: 100px;
+		margin-top: 15px;
+		margin-left: 50px;
+	}
+
+	.enter {
+		text-align: center;
+	}
+
+	.insert {
+		margin: 0 auto;
+	}
+
+	.render {
+		background-color: red;
+		margin: 0 auto;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	button {
+		margin: 0 auto;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		background-color: #E4F1FE;
+		height: 30px;
+		width: 80px;
+		border-radius: 8%;
+	}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<h1 class="heading">Yoobee calculator</h1>
+		<div class="time">
+			<?php include('calculator.php') ?>
+		</div>
+
+		<p> Please choose the shape for which you want to calculate properties</p>
+		
+		<form class="insert" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+			<div class='dials'>
+				Circle <input type="radio" checked="checked" name="shape[]" id="result2" value="Circle"/>
+
+				Square <input type="radio" checked="checked" name="shape[]" id="result2" value="Square"/>
+
+				Rectangle <input type="radio" checked="checked" name="shape[]" id="result2" value="Rectangle"/>
+			</div>
+			<div class="enter">
+
+				Enter the radius for the circle:<input class="box" type="text" name="radiusPop" value=""/>
+
+				<br>
+
+				Enter the width for the square or rectangle:<input class="box" type="text" name="width" value=""/>
+
+				<br>
+
+				Enter the length for the rectangle:<input class="box" type="text" name="length" value=""/>
+
+				<br>
+
+				<button type="submit">Calculate</button>
+			</div>
+
+		</form>
+
+
+	</div>
+
+
+
+	
+
+
+	
+</body>
+</html>
